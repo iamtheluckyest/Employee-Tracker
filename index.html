@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Employee Database</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<script type="text/javascript" src="moment.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Employee Tracker</h1>
+		</div>
+
+		<!-- EMPLOYEES TABLE PANEL -->
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Employee Table</h3>
+		  </div>
+		  <div class="panel-body">
+			<table class="table" id="employees-table">
+				<thead>
+					<tr>
+						<th>Employee Name</th>
+						<th>Role</th>
+						<th>Start Date</th>
+						<th>Months Worked</th>
+						<th>Monthly Rate ($)</th>
+						<th>Total Billed ($)</th>
+				 	</tr>
+				</thead>
+				<tbody id="employees-table-body">
+				</tbody>
+			</table>
+		  </div>
+		</div>
+
+		<!-- NEW EMPLOYEE PANEL -->
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Employee Tracker</h3>
+		  </div>
+		  <div class="panel-body">
+		   	<form>
+		   	  <div class="form-group">
+		   	    <label for="employee-name">Employee Name</label>
+		   	    <input type="text" class="form-control" id="employee-name">
+		   	  </div>
+		   	  <div class="form-group">
+		   	    <label for="role">Role</label>
+		   	    <input type="text" class="form-control" id="role">
+		   	  </div>		   	  
+		   	  <div class="form-group">
+		   	    <label for="start-date">Start Date</label>
+		   	    <input type="date" class="form-control" id="start-date">
+		   	  </div>
+		   	  <div class="form-group">
+		   	    <label foor="monthly-rate">Monthly Rate</label>
+		   	    <input type="number" class="form-control" id="monthly-rate">
+		   	  </div>
+		   	 
+		   	  <button type="submit" class="btn btn-default" id="submitButton">Submit</button>
+		   	</form>
+		  </div>
+		</div>
+
+
+		
+
+	</div> <!-- end .container -->
+
+	<script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
